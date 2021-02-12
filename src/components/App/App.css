@@ -1,0 +1,9 @@
+.wrap {
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    width: 300px;
+}
+
+.wrap__title {
+    border-bottom: 2px solid black;
+}
