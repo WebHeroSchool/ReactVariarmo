@@ -5,9 +5,19 @@ import styles from './App.module.css';
 
 const App = () => {
   const items = [
-    {value: 'Важное и срочное дело'},
-    {value: 'Важное но не срочное дело'},
-    {value: 'неважное и не срочное дело'},
+    {
+      value: 'Важное и срочное дело',
+      isDone: true
+    },
+    {
+      value: 'Важное но не срочное дело',
+      isDone: false
+    
+    },
+    {
+      value: 'неважное и не срочное дело',
+      isDone: false
+    },
   ]
 
   return (  
