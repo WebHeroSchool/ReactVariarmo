@@ -8,7 +8,7 @@ const App = () => {
   const items = [
     {
       value: 'Важное и срочное дело',
-      isDone: true
+      isDone: false
     },
     {
       value: 'Важное но не срочное дело',
@@ -28,7 +28,6 @@ const App = () => {
     <ItemList items={items}/>
     <Footer count ={3} />
   </div>);
-}
+} 
 
 export default App;
-

@@ -1,9 +1,17 @@
 .wrap {
     margin: auto;
     font-family: 'Courier New', Courier, monospace;
-    width: 300px;
+    width: 500px;
+    background-color: #c7ccd0;
+    padding: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .title {
+    width: 300px;
     border-bottom: 2px solid black;
+    margin: 0;
+    color: #143021;
 }

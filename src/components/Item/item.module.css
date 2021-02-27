@@ -1,7 +1,48 @@
+  
 .item {
-    color: #000;
+    color: #143021;
 }
 
-.done {
+.done{
     text-decoration: line-through;
+} 
+
+li::after {
+    content: '✖';  
+    opacity: .6; 
+    text-align: end;
+    margin-left: 5px;  
+    color: #143021;
+} 
+
+li:hover::after {
+    opacity: 1;
+}
+
+.check {
+    background: none;
+    color: #143021;
+}
+
+.check__input {
+    appearance: none;
+}
+
+.check__box {
+    position: absolute;
+    width: 0.6em;
+    height: 0.6em;
+    margin-top: 0.4em;
+    margin-left: -1em;
+    background-color: #c7ccd0;
+    box-shadow: 0 0 0 0.1em #143021;
+    border-radius: .1em;
+}
+
+.check__input:checked + .check__box {
+    background: #143021;
+    background-image: url('./check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #c7ccd0;
 }
