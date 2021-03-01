@@ -4,7 +4,7 @@ import styles from './itemList.module.css';
 
 const ItemList = ({ items }) => (<ul className={styles.list} >
       {items.map(item => <li key={item.value}>
-      <Item value={item.value} isDone={item.isDone}/>
+      <Item   value={item.value} isDone={item.isDone}/>
     </li>)}
   </ul>);
 
