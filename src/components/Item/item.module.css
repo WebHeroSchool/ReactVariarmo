@@ -7,21 +7,18 @@
     text-decoration: line-through;
 } 
 
-li::after {
-    content: '✖';  
-    opacity: .6; 
-    text-align: end;
-    margin-left: 5px;  
-    color: #143021;
-} 
-
-li:hover::after {
-    opacity: 1;
-}
-
 .check {
     background: none;
     color: #143021;
+    display: flex;
+    align-items: center;
+}
+
+.delBTN {
+    opacity: .7;
+    cursor: pointer;
+    text-align: right;
+    margin-left: auto;
 }
 
 .check__input {

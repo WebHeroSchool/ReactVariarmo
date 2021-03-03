@@ -34,9 +34,12 @@ class App extends React.Component {
           newItem.isDone = !item.isDone;
         }
         return newItem;
-       });
+       });     
       this.setState({ items: newItemList});
     };
+                      
+    onClickDelete = (id) => this.setState(state => ({ items: state.items.filter(item => item.id !== id)})); 
+  
   
   render() {
       return (  
