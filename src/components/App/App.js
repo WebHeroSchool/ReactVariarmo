@@ -46,7 +46,7 @@ class App extends React.Component {
       <div className={styles.wrap}>
       <h1 className={styles.title}>Мои важные дела</h1>
       <InputItem/>
-      <ItemList items={this.state.items} onClickDone={this.onClickDone}/>
+      <ItemList items={this.state.items} onClickDone={this.onClickDone} onClickDelete={this.onClickDelete}/>
       <Footer count ={3} />
     </div>);
   }
