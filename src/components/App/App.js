@@ -8,17 +8,17 @@ class App extends React.Component {
    state = {
       items: [
       {
-        value: 'Важное и срочное дело',
+        value: 'Купить сыр',
         isDone: true,
         id: 1
       },
       {
-        value: 'Важное но не срочное дело',
+        value: 'Порезать сыр',
         isDone: false,
         id: 2
       },
       {
-        value: 'неважное и не срочное дело',
+        value: 'Сделать бутерброд',
         isDone: false,
         id: 3
       }
@@ -38,16 +38,28 @@ class App extends React.Component {
       this.setState({ items: newItemList});
     };
                       
-    onClickDelete = (id) => this.setState(state => ({ items: state.items.filter(item => item.id !== id)})); 
+    onClickDelete = (id) => this.setState(state => ({ items: state.items.filter(item => item.id !== id),
+    count: state.count - 1 })); 
   
+    onClickAdd = value => this.setState(state => ({
+      items: [
+        ...state.items, 
+        {
+          value,
+          isDone: false,
+          id: state.count + 1
+        }
+      ],
+      count: state.count + 1
+    }));
   
   render() {
       return (  
       <div className={styles.wrap}>
       <h1 className={styles.title}>Мои важные дела</h1>
-      <InputItem/>
+      <InputItem onClickAdd={this.onClickAdd} />
       <ItemList items={this.state.items} onClickDone={this.onClickDone} onClickDelete={this.onClickDelete}/>
-      <Footer count ={3} />
+      <Footer count ={this.state.count} />
     </div>);
   }
 };
